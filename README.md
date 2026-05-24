@@ -1,4 +1,4 @@
-# Mi Primera PWA
+# Progressive Web App (PWA)
 
 <!-- Imagen de muestra -->
 <p align="center">
