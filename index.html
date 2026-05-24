@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <title>Mi Primera PWA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d6efd" />
+  <title>Mi Primera PWA</title>
 
-    <!-- Icono para la pantalla de inicio (si se instala) -->
-    <link rel="icon" href="img/icons/icon-192x192.png" sizes="192x192">
-
-    <!-- Manifest -->
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/icons/icon-192x192.png" sizes="192x192" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>¡Bienvenido a Mi Primera PWA!</h1>
-    <p>Esta es una aplicación web progresiva básica.</p>
+  <div class="page">
+    <div class="container">
+      <div class="card" role="region" aria-labelledby="app-title">
+        <div class="brand" aria-hidden="false">
+          <div class="logo" aria-hidden="true">PWA</div>
+          <div>
+            <h1 id="app-title">Mi Primera PWA</h1>
+            <p class="small">Aplicación web progresiva demostrativa</p>
+          </div>
+        </div>
 
-    <!-- Botón para agregar a la pantalla de inicio -->
-    <button id="installBtn" hidden>Instalar PWA</button>
+        <div class="card-body">
+          <p class="lead">¡Bienvenido! Instala esta app y pruébala sin conexión.</p>
+          <p class="desc">Esta PWA muestra cómo usar un Service Worker para cachear recursos, y cómo ofrecer una experiencia de instalación con un modal centrado y accesible.</p>
 
-    <!-- Script principal de JavaScript -->
-    <script src="app.js"></script>
+          <div class="controls">
+            <button id="installBtn" class="btn btn-primary" hidden>Instalar PWA</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert modal personalizado -->
+  <div id="customAlert" class="custom-alert hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="custom-alert__dialog" id="customAlertDialog">
+      <p id="customAlertMessage">Mensaje</p>
+      <button id="customAlertClose">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal de instalación personalizado -->
+  <div id="customInstall" class="custom-install hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="custom-install__dialog">
+      <h3>Instalar aplicación</h3>
+      <p class="small">Mi Primera PWA</p>
+      <div class="custom-install__buttons">
+        <button id="customInstallBtn">Instalar</button>
+        <button id="customInstallCancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

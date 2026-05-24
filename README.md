@@ -1,5 +1,10 @@
 # Mi Primera PWA
 
+<!-- Imagen de muestra -->
+<p align="center">
+  <img src="img/muestra.jpg" alt="Captura de Mi Primera PWA" style="max-width:100%;height:auto;">
+</p>
+
 ## Descripción
 Una Progressive Web App (PWA) sencilla y didáctica que muestra cómo registrar un Service Worker, cachear recursos y permitir la instalación en la pantalla de inicio.
 
